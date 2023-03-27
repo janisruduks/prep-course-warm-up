@@ -14,10 +14,19 @@ export {};
  * and use them in place of convertToUSD() and convertToBRL()
  */
 
+function feeTaker(price: number) {
+    const fee = 0.99;
+    return price * fee;
+}
 // You are allowed to change this function
-function convertToUSD(price) {}
+function convertToUSD(price: number) {
+    return feeTaker(price).toFixed(2)
+}
 // You are allowed to change this function
-function convertToBRL(price) {}
+function convertToBRL(price: number) {
+    price = feeTaker(price) * 5.24;
+    return price.toFixed(2)
+}
 
 const product = "You don't know JS";
 const price = 12.5;

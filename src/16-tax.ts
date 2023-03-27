@@ -1,3 +1,5 @@
+import { ModuleResolutionKind } from "typescript";
+
 export {};
 
 /**
@@ -13,7 +15,11 @@ export {};
  */
 
 // You are allowed to change only this function
-function calculateSalesTax() {}
+function calculateSalesTax(price: number) {
+    const taxRate = 0.21;
+    const salesTax = price * taxRate;
+    return Math.round(salesTax * 100) / 100;
+}
 
 const product = "You don't know JS";
 const price = 19.99;
