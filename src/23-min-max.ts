@@ -5,9 +5,19 @@ export {};
  * one of which does not use built-in Math methods.
  */
 
-const min = array => {};
+const min = (array: number[]) => {
+    return Math.min(...array)
+};
 
-const max = array => {};
+const max = (array: number[]) => {
+    let largest = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > largest) {
+        largest = array[i];
+    }
+  }
+  return largest;
+};
 
 console.log(min([1, 2, 3, 4, 5])); // Expected output: 1
 console.log(min([9, -3, 6])); // Expected output: -3

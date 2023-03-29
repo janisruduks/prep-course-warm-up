@@ -9,7 +9,18 @@ export {};
  *  - https://www.youtube.com/watch?v=Kn06785pkJg (JavaScript Loops Made Easy)
 */
 
-function goThroughNumbers(start, end) {}
+function goThroughNumbers(start: number, end: number) {
+    if (start > end) {
+        return console.log("Invalid output");
+    }
+    for (let i = start; i <= end; i++ ) {
+        if (i % 2 === 0) {
+            console.log("even");
+        } else {
+            console.log("odd");
+        }
+    }
+}
 
 goThroughNumbers(3, 7);
 /* Expected output:

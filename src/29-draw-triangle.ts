@@ -5,7 +5,14 @@ export {};
  *  - https://blog.codeanalogies.com/2017/11/07/javascript-for-loops-explained/
  */
 
-function draw() {}
+function draw(x: number) {
+    const s = "*";
+    let sum = ""
+    for (let i = 0; i <= x; i++) {
+        sum = sum + s;
+        console.log(sum);
+    }
+}
 
 draw(3);
 /* Expected output:
