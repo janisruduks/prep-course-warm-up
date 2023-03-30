@@ -9,12 +9,32 @@ export {};
  *  - https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/
  *  - https://www.youtube.com/watch?v=Pi3QC_fVaD0 (JavaScript this Keyword Explained In 3 Minutes)
  *  - https://www.youtube.com/watch?v=YOlr79NaAtQ (What is THIS in JavaScript? in 100 seconds)
+ * 
+ * 
+ * transformed to class cuz it's 'modern and flexible'
+ * constructor is responsible for initializing the object's properties
+ * when new objective is created using 'new' constructor will be called
+ * 
+ * Area of a circle = pi * (radius) pow 2
+ * Perimeter of a circle = 2 * pi * radius
  */
 
-function Circle(radius) {
-  this.radius = radius;
-  this.area = function() {};
-  this.perimeter = function() {};
+class Circle {
+
+  radius: number;
+
+  constructor(radius: number) {
+    this.radius = radius;
+  }
+
+  area(): number {
+    const area = Math.PI * Math.pow(this.radius, 2);
+    return parseFloat(area.toFixed(2));
+  }
+  perimeter(): number {
+    const perimeter = 2 * Math.PI * this.radius;
+    return parseFloat(perimeter.toFixed(2));
+  }
 }
 
 const c = new Circle(3);

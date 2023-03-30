@@ -9,8 +9,15 @@ export {};
 
 // You are allowed to edit only this function
 function remove(arr: Array<any>, valueToRemove: any) {
-  const newArr = arr.indexOf(valueToRemove);
-  console.log(newArr);
+  const copyNumbers = numbers;
+  const copyNames = names;
+  if (typeof arr[0] === 'number') {
+    copyNumbers.splice(copyNumbers.indexOf(valueToRemove), 1);
+    return copyNumbers; 
+  } else {
+    copyNames.splice(copyNames.indexOf(valueToRemove), 1);
+    return copyNames;
+  }
 }
 
 const numbers = [1, 2, 3];
