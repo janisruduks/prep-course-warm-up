@@ -1,6 +1,12 @@
 export {};
 
-const library = [
+interface Library {
+  title: string,
+  author: string,
+  isRead: boolean
+}
+
+const library: Library[] = [
   {
     title: "Bill Gates",
     author: "The Road Ahead",
@@ -18,7 +24,17 @@ const library = [
   }
 ];
 
-const showStatus = () => {};
+
+
+const showStatus = (library: Library[]) => {
+  library.forEach(book => { //used because for loop itterates through a keys and not the elements of array
+    if(book.isRead) {
+      console.log(`Already read '${book.title}' by ${book.author}`);
+    }else {
+      console.log(`You still need to read '${book.title}' by ${book.author}`);
+    }
+  })
+};
 
 showStatus(library);
 
