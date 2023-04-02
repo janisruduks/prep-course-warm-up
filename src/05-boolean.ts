@@ -1,6 +1,6 @@
 export {};
 
-const isHappy = true;
+const isHappy = "true";
 
 if (isHappy) {
   console.log("I am happy");

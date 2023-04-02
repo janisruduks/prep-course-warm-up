@@ -29,7 +29,7 @@ console.log("Total: " + formatCurrency(price + salesTax));
 /* Expected output:
 
     > Product: You don't know JS
-    > Price: 19.99
+    > Price: £19.99
     > Sales tax: £4.20
     > Total: £24.19
 

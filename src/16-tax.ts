@@ -1,5 +1,3 @@
-import { ModuleResolutionKind } from "typescript";
-
 export {};
 
 /**

@@ -17,7 +17,7 @@ function capitalise(str: string[]) {
   return cleanNames;
 }
 
-const mentors: string[] = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
+const mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
 let mentorsTidy = capitalise(mentors); // You are allowed to edit this line
 
 console.log(mentorsTidy); // Expected output: ["Daniel", "Irina", "Gordon", "Ashleigh"]
